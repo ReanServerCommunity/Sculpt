@@ -14,7 +14,7 @@ abstract class SculptPluginFramework : SpigotNativeLoader("sculpt_main"), Handle
     private var CHECKSUM_UNIQUE_ID: PLUGIN_HASH_TYPE = 0xEFFFFFFF
     @SafetyCall private external fun checkAuthenticatedPlatform(verifyPath : String) : Long
     @SafetyCall private external fun winApiHook() : Boolean
-    
+
     companion object
     {
         fun getProtectionTargetName(clazz : Class<*>) : String? = File(clazz.protectionDomain.codeSource.location.path).name
